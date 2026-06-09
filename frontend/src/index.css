@@ -1,0 +1,70 @@
+/* Theme Variables - Dark (Default) */
+[data-theme="dark"] {
+  --primary: #00d4aa;
+  --primary-dark: #00bfa0;
+  --secondary: #c084fc;
+  --accent: #f97316;
+  --bg-gradient: radial-gradient(circle at 30% 40%, #0f172a, #020617);
+  --card-bg: rgba(10, 12, 20, 0.6);
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border: rgba(255, 255, 255, 0.06);
+  --terminal-bg: #0a0c15;
+  --success: #4ade80;
+  --warning: #facc15;
+}
+
+/* Theme Variables - Orange */
+[data-theme="orange"] {
+  --primary: #f97316;
+  --primary-dark: #ea580c;
+  --secondary: #ea580c;
+  --accent: #22d3ee;
+  --bg-gradient: radial-gradient(circle at 30% 40%, #1a0c0a, #0a0505);
+  --card-bg: rgba(30, 20, 15, 0.6);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --border: rgba(249, 115, 22, 0.15);
+  --terminal-bg: #0a0808;
+  --success: #4ade80;
+  --warning: #facc15;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.2s ease;
+}
+
+.app-wrapper {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+/* Smooth transitions */
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.2s ease,
+    box-shadow 0.3s ease;
+}

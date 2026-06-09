@@ -1,0 +1,398 @@
+/* Error Page - 404 */
+.error-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.error-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* TERMINAL WINDOW */
+.error-terminal {
+  background: rgba(10, 12, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TERMINAL HEADER */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dots span:nth-child(1) {
+  background: #ff5f56;
+}
+.dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+.dots span:nth-child(3) {
+  background: #27c93f;
+}
+
+.terminal-title {
+  font-size: 12px;
+  color: #22d3ee;
+  font-family: monospace;
+}
+
+.terminal-icons {
+  display: flex;
+  gap: 10px;
+  color: #475569;
+  font-size: 12px;
+}
+
+/* TERMINAL BODY */
+.terminal-body {
+  padding: 40px;
+}
+
+/* GLITCH TEXT */
+.glitch-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.glitch-text {
+  font-size: 120px;
+  font-weight: 800;
+  position: relative;
+  color: #ef4444;
+  letter-spacing: 8px;
+  animation: glitch 0.3s infinite;
+  text-shadow:
+    2px 2px 0 #22d3ee,
+    -2px -2px 0 #c084fc;
+}
+
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(2deg);
+  }
+  40% {
+    transform: skew(-2deg);
+  }
+  60% {
+    transform: skew(1deg);
+  }
+  80% {
+    transform: skew(-1deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+.error-title {
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 0;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  font-family: monospace;
+  border-left: 3px solid #ef4444;
+}
+
+.error-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.prompt {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.command {
+  color: #c084fc;
+}
+
+.error-output {
+  color: #ef4444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.error-symbol {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.error-suggestion {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  color: #22d3ee;
+}
+
+/* CODE BLOCK */
+.error-code-block {
+  background: #0a0c15;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #1e293b;
+  overflow-x: auto;
+}
+
+.error-code-block pre {
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.keyword {
+  color: #c084fc;
+  font-weight: 500;
+}
+
+.function {
+  color: #60a5fa;
+}
+
+.class-name {
+  color: #facc15;
+}
+
+.string {
+  color: #34d399;
+}
+
+/* BUTTONS */
+.error-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.back-btn {
+  background: rgba(30, 41, 59, 0.8);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-btn:hover {
+  background: rgba(30, 41, 59, 1);
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.home-btn {
+  background: linear-gradient(135deg, #22d3ee, #14b8a6);
+  color: #0a0a12;
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.4);
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+/* COUNTDOWN */
+.countdown {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.countdown-text {
+  font-size: 13px;
+  color: #64748b;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.countdown-number {
+  color: #22d3ee;
+  font-weight: 700;
+  font-size: 16px;
+  background: rgba(34, 211, 238, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.countdown-bar {
+  width: 100%;
+  height: 4px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.countdown-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #14b8a6);
+  border-radius: 10px;
+  transition: width 1s linear;
+}
+
+/* STATUS */
+.error-status {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #64748b;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.status-icon {
+  color: #22d3ee;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .terminal-body {
+    padding: 25px;
+  }
+
+  .glitch-text {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+
+  .error-title {
+    font-size: 22px;
+  }
+
+  .error-status {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .error-code-block pre {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-body {
+    padding: 20px;
+  }
+
+  .glitch-text {
+    font-size: 50px;
+  }
+
+  .error-title {
+    font-size: 18px;
+  }
+
+  .error-message {
+    padding: 15px;
+  }
+
+  .error-line,
+  .error-output,
+  .error-suggestion {
+    font-size: 11px;
+  }
+
+  .error-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .error-status {
+    grid-template-columns: 1fr;
+  }
+
+  .status-item {
+    font-size: 10px;
+  }
+}
