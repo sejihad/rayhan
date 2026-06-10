@@ -32,7 +32,7 @@ export default function Contact() {
       "http://localhost:3000";
 
     try {
-      const response = await fetch(`${apiUrl}/send-email`, {
+      const response = await fetch(`${apiUrl}/api/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -172,7 +172,9 @@ export default function Contact() {
                   <option value="Software System">Software System</option>
                   <option value="MERN Stack App">MERN Stack App</option>
                   <option value="React Native App">React Native App</option>
-                  <option value="Cybersecurity Review">Cybersecurity Review</option>
+                  <option value="Cybersecurity Review">
+                    Cybersecurity Review
+                  </option>
                   <option value="Digital Marketing">Digital Marketing</option>
                 </select>
                 <span className="input-border"></span>
@@ -194,7 +196,11 @@ export default function Contact() {
                 <p className={`form-status ${status.type}`}>{status.message}</p>
               )}
 
-              <button type="submit" className="submit-btn" disabled={isSubmitting}>
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={isSubmitting}
+              >
                 <FaPaperPlane className="btn-icon" />
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <span className="btn-arrow">-&gt;</span>

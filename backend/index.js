@@ -10,7 +10,7 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
   "http://localhost:5173",
   "http://127.0.0.1:5173",
-  "http://rayhanislamrokon.com"
+  "http://rayhanislamrokon.com",
 ].filter(Boolean);
 
 app.use(
@@ -102,7 +102,7 @@ app.get("/", (_req, res) => {
   res.json({ ok: true, message: "Email API is running" });
 });
 
-app.post("/send-email", async (req, res) => {
+app.post("/api/send-email", async (req, res) => {
   const missingEnv = getMissingEnv();
 
   if (missingEnv.length) {
