@@ -11,6 +11,7 @@ import {
   SiExpress,
   SiFlutter,
   SiJavascript,
+  SiKotlin,
   SiMongodb,
   SiMysql,
   SiNodedotjs,
@@ -82,6 +83,13 @@ export default function Skills() {
       val: 88,
       color: "purple",
       icon: <SiPython size={32} />,
+    },
+    {
+      name: "Kotlin",
+      sub: "fun buildAndroidFeature() = ship()",
+      val: 86,
+      color: "orange",
+      icon: <SiKotlin size={32} />,
     },
     {
       name: "Databases",
@@ -174,7 +182,7 @@ export default function Skills() {
             <div className="terminal-lines">
               <p className="terminal-line">
                 <span className="success">OK</span> MERN stack, React Native,
-                Python, and Java loaded
+                Python, Kotlin, and Java loaded
               </p>
               <p className="terminal-line highlight">
                 <span className="arrow">-&gt;</span> Ready for web, app,
